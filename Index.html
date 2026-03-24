@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setor Financeiro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+    <!-- Canvas para animação de fundo -->
+    <canvas id="particles-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 border-b border-white/10 backdrop-blur-md bg-black/30 transition-all duration-500" id="header">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+            <div class="flex items-center gap-3 group cursor-pointer">
+                <div class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center group-hover:border-white/60 transition-all duration-500 group-hover:scale-110">
+                    <i data-lucide="landmark" class="w-5 h-5 text-white/80 group-hover:text-white transition-colors"></i>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-light tracking-[0.2em] uppercase font-['Cormorant_Garamond'] text-white/90 group-hover:text-white transition-colors">
+                    Setor Financeiro
+                </h1>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase font-['Inter']">
+                <span class="w-2 h-2 rounded-full bg-white/60 animate-pulse"></span>
+                Sistema Interno
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 min-h-screen flex items-center justify-center px-6 pt-32 pb-20">
+        <div class="max-w-4xl w-full">
+            
+            <!-- Título Secundário -->
+            <div class="text-center mb-16 opacity-0 translate-y-10 animate-fade-in-up" style="animation-delay: 0.2s; animation-fill-mode: forwards;">
+                <p class="text-white/40 text-sm tracking-[0.3em] uppercase mb-4 font-['Inter']">Documentação & Normas</p>
+                <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent mx-auto"></div>
+            </div>
+
+            <!-- Links Container -->
+            <div class="grid gap-6 md:gap-8">
+                
+                <!-- Link 1: Geral -->
+                <a href="#" class="group relative block opacity-0 translate-y-10 animate-fade-in-up" style="animation-delay: 0.4s; animation-fill-mode: forwards;">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                    <div class="relative border border-white/10 hover:border-white/30 bg-white/[0.02] hover:bg-white/[0.05] backdrop-blur-sm rounded-lg p-8 md:p-10 transition-all duration-500 group-hover:transform group-hover:translate-x-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-6">
+                                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 group-hover:bg-white/5 transition-all duration-500">
+                                    <i data-lucide="layout-grid" class="w-5 h-5 text-white/60 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-xl md:text-2xl font-['Cormorant_Garamond'] font-light tracking-wide text-white/90 group-hover:text-white transition-colors">Geral</h2>
+                                    <p class="text-white/30 text-sm mt-1 font-['Inter'] tracking-wider group-hover:text-white/50 transition-colors">Visão geral do setor</p>
+                                </div>
+                            </div>
+                            <div class="transform group-hover:translate-x-2 transition-transform duration-500">
+                                <i data-lucide="arrow-right" class="w-6 h-6 text-white/30 group-hover:text-white/80"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Link 2: Regimento Interno (Link externo) -->
+                <a href="https://drive.google.com/file/d/1JHQcB4uKPG9IeoaEP2silKpWfmWfQa_F/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="group relative block opacity-0 translate-y-10 animate-fade-in-up" style="animation-delay: 0.6s; animation-fill-mode: forwards;">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                    <div class="relative border border-white/20 hover:border-white/50 bg-white/[0.03] hover:bg-white/[0.08] backdrop-blur-sm rounded-lg p-8 md:p-10 transition-all duration-500 group-hover:transform group-hover:translate-x-2 shadow-[0_0_30px_rgba(255,255,255,0.02)] group-hover:shadow-[0_0_40px_rgba(255,255,255,0.05)]">
+                        <div class="absolute top-4 right-4">
+                            <span class="text-[10px] tracking-widest uppercase text-white/30 border border-white/10 px-2 py-1 rounded group-hover:border-white/30 group-hover:text-white/50 transition-all">PDF Externo</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-6">
+                                <div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:border-white/60 group-hover:bg-white/10 transition-all duration-500 group-hover:scale-110">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-white/70 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-xl md:text-2xl font-['Cormorant_Garamond'] font-light tracking-wide text-white group-hover:text-white transition-colors">Regimento Interno</h2>
+                                    <p class="text-white/40 text-sm mt-1 font-['Inter'] tracking-wider group-hover:text-white/60 transition-colors">Documento oficial e diretrizes</p>
+                                </div>
+                            </div>
+                            <div class="transform group-hover:translate-x-3 transition-transform duration-500">
+                                <i data-lucide="external-link" class="w-6 h-6 text-white/40 group-hover:text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Link 3: Normas do Setor -->
+                <a href="#" class="group relative block opacity-0 translate-y-10 animate-fade-in-up" style="animation-delay: 0.8s; animation-fill-mode: forwards;">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                    <div class="relative border border-white/10 hover:border-white/30 bg-white/[0.02] hover:bg-white/[0.05] backdrop-blur-sm rounded-lg p-8 md:p-10 transition-all duration-500 group-hover:transform group-hover:translate-x-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-6">
+                                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 group-hover:bg-white/5 transition-all duration-500">
+                                    <i data-lucide="scale" class="w-5 h-5 text-white/60 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-xl md:text-2xl font-['Cormorant_Garamond'] font-light tracking-wide text-white/90 group-hover:text-white transition-colors">Normas do Setor</h2>
+                                    <p class="text-white/30 text-sm mt-1 font-['Inter'] tracking-wider group-hover:text-white/50 transition-colors">Regulamentos e procedimentos</p>
+                                </div>
+                            </div>
+                            <div class="transform group-hover:translate-x-2 transition-transform duration-500">
+                                <i data-lucide="arrow-right" class="w-6 h-6 text-white/30 group-hover:text-white/80"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Footer decorativo -->
+            <div class="mt-24 text-center opacity-0 animate-fade-in" style="animation-delay: 1.2s; animation-fill-mode: forwards;">
+                <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8"></div>
+                <p class="text-white/20 text-xs tracking-[0.4em] uppercase font-['Inter']">Setor Financeiro • 2024</p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
